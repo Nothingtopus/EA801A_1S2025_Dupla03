@@ -28,36 +28,36 @@ set(PICO_BOARD pico_w CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(U7T_OBL C CXX ASM)
+project(projeto_01 C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(U7T_OBL U7T_OBL.c inc/ssd1306_i2c.c)
+add_executable(projeto_01 projeto_01.c inc/ssd1306_i2c.c)
 
-pico_set_program_name(U7T_OBL "U7T_OBL")
-pico_set_program_version(U7T_OBL "0.1")
+pico_set_program_name(projeto_01 "projeto_01")
+pico_set_program_version(projeto_01 "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(U7T_OBL 0)
-pico_enable_stdio_usb(U7T_OBL 0)
+pico_enable_stdio_uart(projeto_01 0)
+pico_enable_stdio_usb(projeto_01 0)
 
 # Add the standard library to the build
-target_link_libraries(U7T_OBL
+target_link_libraries(projeto_01
         pico_stdlib)
 
 # Add the standard include files to the build
-target_include_directories(U7T_OBL PRIVATE
+target_include_directories(projeto_01 PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
 )
 
 # Add any user requested libraries
-target_link_libraries(U7T_OBL 
+target_link_libraries(projeto_01 
         hardware_i2c
         hardware_adc
         )
 
-pico_add_extra_outputs(U7T_OBL)
+pico_add_extra_outputs(projeto_01)
 
