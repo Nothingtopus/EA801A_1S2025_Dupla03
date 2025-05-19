@@ -1,1 +1,5 @@
+Configuração da BitDogLab para o uso de Micro Python.
+
+Para programar a placa BitDogLab na linguagem Micro Python é necessário realizar algumas configurações. Usando o software Thonny, é possível configurar a placa e programá-la, salvando arquivos diretamente na placa, como bibliotecas e o arquivo main. Para isso, deve-se conectar a placa a uma porta USB do seu computador enquanto o botão localizado na parte inferior é pressionado (modo de gravação de firmware da placa). Após isso, clique no menu “Ferramentas” localizado na parte superior da interface do Thonny e então clique em “Opções”. Na aba “Interpretador”, selecione o interpretador “MicroPython (Raspberry Pi Pico)” e clique na opção “Instalar ou atualizar MicroPython”. Na opção “variant”, escolha a opção “Raspberry Pi Pico / Pico H” e escolha em “version” a versão mais nova que estiver disponível. Clique em “instalar” e espere o processo finalizar. 
+Após isso, desconecte a placa do computador e a conecte novamente, mas sem pressionar o botão. Assim, a placa está pronta para ser programada usando a IDE do Thonny.
 
